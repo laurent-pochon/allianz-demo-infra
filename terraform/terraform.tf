@@ -2,7 +2,7 @@ terraform {
 
   cloud {
     workspaces {
-      name = "cicd"
+      name = "allianz-demo-eks"
     }
   }
 
