@@ -13,6 +13,15 @@ resource "random_string" "suffix" {
   special = false
 }
 
+resource "aws_efs_file_system" "efs-jenkins" {
+  creation_token = "jenkins"
+  value = "5Gi"
+
+  tags = {
+    Name = "jenkins"
+  }
+}
+
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.19.0"
