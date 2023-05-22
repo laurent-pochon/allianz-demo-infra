@@ -15,7 +15,6 @@ resource "random_string" "suffix" {
 
 resource "aws_efs_file_system" "efs-jenkins" {
   creation_token = "jenkins"
-  value = "5Gi"
 
   tags = {
     Name = "jenkins"
